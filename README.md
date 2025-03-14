@@ -96,3 +96,30 @@ This RAG system uses:
 - **Text Chunking**: Recursive character text splitting for preserving code structure
 - **Normalization**: Custom code normalization preserving indentation while cleaning whitespace
 - **LLM Integration**: Optional Gemini 2.0 Flash model for generating answers (requires API key)
+
+The implementation includes:
+- Experimenting with various chunking strategies to better preserve code context
+- Testing query expansion techniques and various text preprocessing methods
+- Evaluating multiple embedding models to optimize for code understanding
+- A complete pipeline from GitHub repository indexing to retrieval
+
+## Challenges and Findings
+
+The implementation of this RAG system revealed several challenges and insights:
+
+- Achieved a modest Recall@10 score of 0.49 on the evaluation dataset
+- Standard embedding models demonstrated limitations with code-specific semantics
+- Balancing chunk size with contextual integrity significantly impacted retrieval quality
+- Query-code semantic gap presents a fundamental challenge requiring specialized techniques
+- Multilingual code content added complexity to the embedding process and retrieval results
+
+The systematic evaluation framework measures Recall@10 as specified in the requirements, with results saved to CSV for transparency. The project demonstrates both the potential and current limitations of applying RAG approaches to code repositories.
+
+## Future Improvements
+
+Future enhancements to the system could include:
+- Specialized code embeddings designed for programming language semantics
+- Hybrid retrieval strategies combining semantic and keyword-based approaches
+- More sophisticated context-preserving chunking methods
+- Fine-tuning embedding models specifically for code comprehension
+- Enhanced query preprocessing techniques to bridge the semantic gap
